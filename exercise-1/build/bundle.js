@@ -880,26 +880,53 @@ function _possibleConstructorReturn(self, call) { if (!self) { throw new Referen
 function _inherits(subClass, superClass) { if (typeof superClass !== "function" && superClass !== null) { throw new TypeError("Super expression must either be null or a function, not " + typeof superClass); } subClass.prototype = Object.create(superClass && superClass.prototype, { constructor: { value: subClass, enumerable: false, writable: true, configurable: true } }); if (superClass) Object.setPrototypeOf ? Object.setPrototypeOf(subClass, superClass) : subClass.__proto__ = superClass; }
 
 var App = function (_React$Component) {
-    _inherits(App, _React$Component);
+  _inherits(App, _React$Component);
 
-    function App(props) {
-        _classCallCheck(this, App);
+  function App(props) {
+    _classCallCheck(this, App);
 
-        return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
+    return _possibleConstructorReturn(this, (App.__proto__ || Object.getPrototypeOf(App)).call(this, props));
+  }
+
+  _createClass(App, [{
+    key: 'render',
+    value: function render() {
+      return _react2.default.createElement(
+        'div',
+        { className: 'wrapper' },
+        _react2.default.createElement(
+          'div',
+          { className: 'list' },
+          _react2.default.createElement(
+            'div',
+            { className: 'listItem' },
+            _react2.default.createElement('img', { src: 'img/pikachu-2.svg', alt: 'Pikachu', title: 'Pikachu' }),
+            _react2.default.createElement(
+              'h3',
+              { className: 'listItem__name' },
+              'Pikachu'
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'listItem__price' },
+              _react2.default.createElement(
+                'div',
+                { className: 'listItem__priceTxt' },
+                '$40'
+              )
+            ),
+            _react2.default.createElement(
+              'div',
+              { className: 'listItem__addButton' },
+              'Add to Cart'
+            )
+          )
+        )
+      );
     }
+  }]);
 
-    _createClass(App, [{
-        key: 'render',
-        value: function render() {
-            return _react2.default.createElement(
-                'h1',
-                null,
-                'Hello World'
-            );
-        }
-    }]);
-
-    return App;
+  return App;
 }(_react2.default.Component);
 
 _reactDom2.default.render(_react2.default.createElement(App, null), document.getElementById('root'));
